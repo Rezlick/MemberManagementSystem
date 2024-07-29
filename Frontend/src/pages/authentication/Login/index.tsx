@@ -37,7 +37,7 @@ function SignInPages() {
             <Col xs={24} sm={24} md={24} lg={24} xl={24}>
               <img
                 alt="logo"
-                style={{ width: "80%" }}
+                style={{ width: "100%" }}
                 src={logo}
                 className="images-logo"
               />
