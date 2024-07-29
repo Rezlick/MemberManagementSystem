@@ -52,6 +52,11 @@ function Customers() {
       key: "email",
     },
     {
+      title: "เบอร์โทรศัพท์",
+      dataIndex: "phone_number",
+      key: "phone_number",
+    },
+    {
       title: "วัน/เดือน/ปี เกิด",
       key: "birthday",
       render: (record) => <>{dayjs(record.birthday).format("DD/MM/YYYY")}</>,
@@ -62,9 +67,9 @@ function Customers() {
       key: "age",
     },
     {
-      title: "เพศ",
-      key: "gender",
-      render: (record) => <>{record?.gender?.gender}</>,
+      title: "ตำแหน่ง",
+      key: "role",
+      render: (record) => <>{record?.role?.role}</>,
     },
     {
       title: "",

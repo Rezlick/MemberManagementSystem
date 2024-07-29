@@ -34,9 +34,10 @@ function CustomerEdit() {
         first_name: res.data.first_name,
         last_name: res.data.last_name,
         email: res.data.email,
+        phone_number: res.data.phone_number,
         birthday: dayjs(res.data.birthday),
         age: res.data.age,
-        gender_id: res.data.gender?.ID,
+        role_id: res.data.role?.ID,
       });
     } else {
       messageApi.open({
@@ -120,6 +121,24 @@ function CustomerEdit() {
             </Col>
             <Col xs={24} sm={24} md={24} lg={24} xl={12}>
               <Form.Item
+                label="เบอร์โทรศัพท์"
+                name="phone_number"
+                rules={[
+                  { required: true, message: "กรุณากรอกเบอร์โทรศัพท์ !" }]}
+              >
+                <Input 
+                        maxLength={10} 
+                        minLength={10}
+                        onKeyPress={(event) => {
+                        if (!/[0-9]/.test(event.key)) {
+                        event.preventDefault();
+                        }
+                        }} 
+                      />
+              </Form.Item>
+            </Col>
+            <Col xs={24} sm={24} md={24} lg={24} xl={12}>
+              <Form.Item
                 label="วัน/เดือน/ปี เกิด"
                 name="birthday"
                 rules={[{ required: true, message: "กรุณาเลือกวัน/เดือน/ปี เกิด !" }]}
@@ -138,17 +157,16 @@ function CustomerEdit() {
             </Col>
             <Col xs={24} sm={24} md={24} lg={24} xl={12}>
               <Form.Item
-                label="เพศ"
-                name="gender_id"
-                rules={[{ required: true, message: "กรุณาเลือกเพศ !" }]}
+                label="ตำแหน่ง"
+                name="role_id"
+                rules={[{ required: true, message: "กรุณาเลือกตำแหน่ง !" }]}
               >
                 <Select
                   defaultValue=""
                   style={{ width: "100%" }}
                   options={[
-                    { value: "", label: "กรุณาเลือกเพศ", disabled: true },
-                    { value: 1, label: "Male" },
-                    { value: 2, label: "Female" },
+                    { value: 1, label: "Admin" },
+                    { value: 2, label: "Member" },
                   ]}
                 />
               </Form.Item>

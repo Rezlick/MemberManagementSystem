@@ -81,6 +81,25 @@ import {
               </Col>
               <Col xs={24} sm={24} md={24} lg={24} xl={12}>
                 <Form.Item
+                  label="เบอร์โทรศัพท์"
+                  name="phone_number"
+                  rules={[
+                    { required: true, message: "กรุณากรอกเบอร์โทรศัพท์ !" },
+                  ]}
+                >
+                  <Input 
+                        maxLength={10} 
+                        minLength={10}
+                        onKeyPress={(event) => {
+                        if (!/[0-9]/.test(event.key)) {
+                        event.preventDefault();
+                        }
+                        }} 
+                      />
+                </Form.Item>
+              </Col>
+              <Col xs={24} sm={24} md={24} lg={24} xl={12}>
+                <Form.Item
                   label="รหัสผ่าน"
                   name="password"
                   rules={[{ required: true, message: "กรุณากรอกรหัสผ่าน !" }]}
@@ -108,17 +127,16 @@ import {
               </Col>
               <Col xs={24} sm={24} md={24} lg={24} xl={12}>
                 <Form.Item
-                  label="เพศ"
-                  name="gender_id"
-                  rules={[{ required: true, message: "กรุณาเลือกเพศ !" }]}
+                  label="ตำแหน่ง"
+                  name="role_id"
+                  rules={[{ required: true, message: "กรุณาเลือกตำแหน่ง !" }]}
                 >
                   <Select
                     defaultValue=""
                     style={{ width: "100%" }}
                     options={[
-                      { value: "", label: "กรุณาเลือกเพศ", disabled: true },
-                      { value: 1, label: "Male" },
-                      { value: 2, label: "Female" },
+                      { value: 1, label: "Admin" },
+                      { value: 2, label: "Member" },
                     ]}
                   />
                 </Form.Item>
