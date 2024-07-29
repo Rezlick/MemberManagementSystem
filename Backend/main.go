@@ -34,7 +34,7 @@ func main() {
        router.DELETE("/user/:id", users.Delete)
    }
 
-   r.GET("/genders", genders.GetAll)
+   r.GET("/roles", roles.GetAll)
    r.GET("/", func(c *gin.Context) {
        c.String(http.StatusOK, "API RUNNING... PORT: %s", PORT)
    })
