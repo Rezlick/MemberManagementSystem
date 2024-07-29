@@ -43,7 +43,7 @@ import {
       <>
         {contextHolder}
         <Flex justify="center" align="center" className="login">
-          <Card className="card-login" style={{ width: 600 }}>
+          <Card className="card-register" style={{ width: 600 }}>
             <Row align={"middle"} justify={"center"}>
               <Col xs={24} sm={24} md={24} lg={10} xl={10}>
                 <img alt="logo" src={logo} className="images-logo" />
