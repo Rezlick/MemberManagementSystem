@@ -4,7 +4,7 @@ import (
    "net/http"
    "github.com/gin-gonic/gin"
    "github.com/rezlick/MemberManagementSystem/config"
-   "github.com/rezlick/MemberManagementSystem/controller/genders"
+   "github.com/rezlick/MemberManagementSystem/controller/roles"
    "github.com/rezlick/MemberManagementSystem/controller/users"
    "github.com/rezlick/MemberManagementSystem/middlewares"
 )

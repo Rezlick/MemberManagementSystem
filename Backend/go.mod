@@ -1,4 +1,4 @@
-module github.com/rezlick/MemberManagemnetSystem
+module github.com/rezlick/MemberManagementSystem
 
 go 1.22.5
 
