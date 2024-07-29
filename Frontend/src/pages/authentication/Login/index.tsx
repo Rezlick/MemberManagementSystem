@@ -33,7 +33,7 @@ function SignInPages() {
       {contextHolder}
       <Flex justify="center" align="center" className="login">
         <Card className="card-login" style={{ width: 500 }}>
-          <Row align={"middle"} justify={"center"} style={{ height: "400px" }}>
+          <Row align={"middle"} justify={"center"} style={{ height: "450px" }}>
             <Col xs={24} sm={24} md={24} lg={24} xl={24}>
               <img
                 alt="logo"
