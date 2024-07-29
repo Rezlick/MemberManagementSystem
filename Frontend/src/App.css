@@ -16,6 +16,12 @@ body {
 }
 
 .card-login {
+  width: 100%;
+  height: auto;
+  max-height: 550px;
+}
+
+.card-register {
   overflow-y: scroll;
   width: 100%;
   height: auto;
