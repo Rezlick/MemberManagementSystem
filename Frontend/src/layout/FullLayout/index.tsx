@@ -6,7 +6,7 @@ import { Breadcrumb, Layout, Menu, theme, Button, message } from "antd";
 import logo from "../../assets/logo.png";
 import Dashboard from "../../pages/dashboard";
 import Customer from "../../pages/customer";
-import CustomerCreate from "../../pages/customer/create";
+import CustomerCreate from "../../pages/customer/create/index.";
 import CustomerEdit from "../../pages/customer/edit";
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -69,7 +69,7 @@ const FullLayout: React.FC = () => {
             </Routes>
           </div>
         </Content>
-        <Footer style={{ textAlign: "center" }}>System Analysis and Design 1/67</Footer>
+        <Footer style={{ textAlign: "center" }}>Member Managemnet System</Footer>
       </Layout>
     </Layout>
   );
