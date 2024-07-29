@@ -7,7 +7,7 @@ import logo from "../../assets/logo.png";
 import Dashboard from "../../pages/dashboard";
 import Customer from "../../pages/customer";
 import CustomerCreate from "../../pages/customer/create";
-import CustomerEdit from "../../.pages/customer/edit";
+import CustomerEdit from "../../pages/customer/edit";
 
 const { Header, Content, Footer, Sider } = Layout;
 
